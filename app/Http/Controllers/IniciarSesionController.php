@@ -10,9 +10,9 @@ class IniciarSesionController extends Controller
     public function login(){
         return view('IniciarSesion/Login');
     }
-    public function Registro(){
-        return view('IniciarSesion/Registro');
-    }
+    // public function Registro(){
+    //     return view('IniciarSesion/Registro');
+    // }
     public function Cambio(){
         return "Este es la pagina de cambio contraseña";
     }

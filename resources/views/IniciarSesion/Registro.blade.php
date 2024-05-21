@@ -47,17 +47,16 @@
                         <h1>Crea tu cuenta ahorra <span>+</span></h1>
                         <p class="text">Si ya tienes cuenta <a>Inicia sesión</a></p>
                         </div>
-
-                        <form action="index.html" method="post" class="contact-form">
+                        <form action="{{route('registro_Store')}}" method="post" class="contact-form">
                             <div class="input-wrap">
-                                <input class="contact-input" autocomplete="off" name="first name" type="text" required>
-                                <label>first name</label>
+                                <input class="contact-input" autocomplete="off" name="firstName" type="text" required>
+                                <label>Primer Nombre</label>
                                 <i class="icon fa-solid fa-id-card"></i>
                             </div>
 
                             <div class="input-wrap">
-                                <input class="contact-input" autocomplete="off" name="Last name" type="text" required>
-                                <label>Last name</label>
+                                <input class="contact-input" autocomplete="off" name="LastName" type="text" required>
+                                <label>Segundo Nombre</label>
                                 <i class="icon fa-solid fa-id-card"></i>
                             </div>
 
@@ -74,14 +73,14 @@
                             </div>
 
                             <div class="input-wrap">
-                                <input class="contact-input" name="First-password" type="password" required placeholder="">
+                                <input class="contact-input" name="FirstPassword" type="password" required placeholder="">
                                 <label>Contraseña</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
 
 
                             <div class="input-wrap">
-                                <input class="contact-input" name="Second-password" type="password" required placeholder="">
+                                <input class="contact-input" name="SecondPassword" type="password" required placeholder="">
                                 <label>Confirmacion de contraseña</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
