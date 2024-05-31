@@ -48,51 +48,46 @@
                         <p class="text">Si ya tienes cuenta <a>Inicia sesión</a></p>
                         </div>
 
-                        <form action="index.html" method="post" class="contact-form">
+                        <form action="{{ route('Registro_store') }}" method="post" class="contact-form">
+                            @csrf
                             <div class="input-wrap">
-                                <input class="contact-input" autocomplete="off" name="first name" type="text" required>
-                                <label>first name</label>
+                                <input class="contact-input" autocomplete="off" name="name" type="text" required>
+                                <label>Nombre</label>
                                 <i class="icon fa-solid fa-id-card"></i>
                             </div>
 
                             <div class="input-wrap">
-                                <input class="contact-input" autocomplete="off" name="Last name" type="text" required>
-                                <label>Last name</label>
+                                <input class="contact-input" autocomplete="off" name="lastName" type="text" required>
+                                <label>Apellido</label>
                                 <i class="icon fa-solid fa-id-card"></i>
                             </div>
 
-                            <div class="input-wrap w-100">
+                            {{-- <div class="input-wrap w-100">
                                 <input class="contact-input" name="ID" type="number" required placeholder="">
                                 <label>Documento de identidad</label>
                                 <i class="icon fa-solid fa-envelope"></i>
-                            </div>
+                            </div> --}}
 
                             <div class="input-wrap w-100">
-                                <input class="contact-input" autocomplete="off" name="Email" type="text" required>
+                                <input class="contact-input" autocomplete="off" name="email" type="text" required>
                                 <label>Email</label>
                                 <i class="icon fa-solid fa-envelope"></i>
                             </div>
 
                             <div class="input-wrap">
-                                <input class="contact-input" name="First-password" type="password" required placeholder="">
+                                <input class="contact-input" name="password" type="password" required placeholder="">
                                 <label>Contraseña</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
 
 
                             <div class="input-wrap">
-                                <input class="contact-input" name="Second-password" type="password" required placeholder="">
+                                <input class="contact-input" name="confirmPassword" type="password" required placeholder="">
                                 <label>Confirmacion de contraseña</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
 
                             <div class="contact-buttons">
-                                <!-- <button class="btn upload">
-                                    <span>
-                                        <i class="fa-solid fa-paperclip"></i> agregar archivo
-                                    </span>
-                                    <input type="file" name="attachement">
-                                </button> -->
                                 <input type="submit" value="Enviar" class="btn">
                             </div>
                         </form>
@@ -130,6 +125,6 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-    <script src="/registro.js"></script>
+    <script src="{{ asset('js/registro.js') }}"></script>
 </body>
 </html>
